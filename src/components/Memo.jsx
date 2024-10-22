@@ -1,4 +1,4 @@
-import { memo, useState } from "react";
+import { Fragment, memo, useState } from "react";
 
 const Memo = () => {
   const [title, setTitle] = useState("My name is niketh");
@@ -24,10 +24,10 @@ const Memo = () => {
 //   return <>{title}</>;
 // };
 
-const Header = (function({title}){
-  return <>
+const Header = memo(function({title}){
+  return <Fragment>
   {title}
-  </>
+  </Fragment>
 })
 
 export default Memo;
